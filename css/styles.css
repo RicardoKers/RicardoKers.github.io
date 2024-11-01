@@ -91,9 +91,17 @@
     align-items: flex-start;
 }
 
+.conteudo {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 /* Coluna esquerda ocupa mais espaço */
 .coluna-esquerda {
-    flex: 2;
+    flex: 3;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -102,11 +110,14 @@
 
 /* Coluna direita com largura fixa */
 .coluna-direita {
-    flex: 0 0 450px;
+    flex: 1;
+	max-width: 450px; /* Define uma largura máxima para a coluna direita */
     padding: 20px;
     background-color: #e9ecef;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	align-self: flex-start; /* Garante que a coluna direita fique no topo */
+	text-align: left; /* Alinha o texto à esquerda */
 }
 
 /* Estilos para o título da coluna direita */
@@ -143,17 +154,17 @@
 
 /* Media Query para telas estreitas */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Empilha as colunas */
+  .conteudo {
+        flex-direction: column;
     }
 
     .coluna-esquerda, .coluna-direita {
-        flex: 1 1 100%; /* Ambas as colunas ocupam toda a largura */
-        max-width: 100%; /* Garante que ocupem toda a largura disponível */
+        width: 100%;
+        max-width: 100%;
     }
 
     .coluna-direita {
-        margin-top: 20px; /* Adiciona um espaçamento entre as colunas quando empilhadas */
+        margin-top: 20px;
     }
 }
 
