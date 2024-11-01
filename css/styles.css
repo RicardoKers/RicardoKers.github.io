@@ -79,6 +79,87 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+/* Kerschbaumer */
+
+/* Contêiner principal para duas colunas */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* Coluna esquerda ocupa mais espaço */
+.coluna-esquerda {
+    flex: 2;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Coluna direita com largura fixa */
+.coluna-direita {
+    flex: 0 0 450px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o título da coluna direita */
+.coluna-direita h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilos para a lista de disciplinas */
+.disciplinas-lista {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;            /* Remove o padding da lista */
+    margin: 0;             /* Remove o margin da lista */
+}
+
+.disciplinas-lista li {
+    margin-bottom: 5px;    /* Espaço entre os itens da lista */
+}
+
+/* Estilos para os links dentro da lista */
+.disciplinas-lista a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.disciplinas-lista a:hover {
+    background-color: #d1e7dd;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Media Query para telas estreitas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha as colunas */
+    }
+
+    .coluna-esquerda, .coluna-direita {
+        flex: 1 1 100%; /* Ambas as colunas ocupam toda a largura */
+        max-width: 100%; /* Garante que ocupem toda a largura disponível */
+    }
+
+    .coluna-direita {
+        margin-top: 20px; /* Adiciona um espaçamento entre as colunas quando empilhadas */
+    }
+}
+
+
+/* \Kerschbaumer */
+
 *,
 *::before,
 *::after {
